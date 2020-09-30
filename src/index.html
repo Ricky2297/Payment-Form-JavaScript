@@ -10,19 +10,193 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container-fluid p-4">
+      <div class="card text-center">
+        <div class="card-header d-flex justify-content-Start font-weight-bold">
+          <h1>Payment for Example</h1>
+        </div>
+
+        <div class="card-body">
+          <div id="alert" class="alert-danger d-none"></div>
+
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-5 text-left">
+                <label for="cardNumber"><strong>Card#</strong></label>
+                <input type="text" class="form-control" id="cardNumber" />
+              </div>
+              <div class="form-group col-md-3 text-left">
+                <label for="cvcNumber"><strong>CVC#</strong></label>
+                <input type="text" class="form-control" id="cvcNumber" />
+              </div>
+              <div class="form-group col-md-4 text-left">
+                <label for="Amount"><strong>Amount</strong></label>
+                <input type="text" class="form-control" id="Amount" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6 text-left">
+                <label for="firstName"><strong>First Name</strong></label>
+                <input type="text" class="form-control" id="firstName" />
+              </div>
+              <div class="form-group col-md-6 text-left">
+                <label for="lastname"><strong>Last Name</strong></label>
+                <input type="text" class="form-control" id="lastname" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6 text-left">
+                <label for="city"> <strong>City</strong></label>
+                <input type="text" class="form-control" id="city" />
+              </div>
+              <div class="form-group col-md-4 text-left">
+                <label for="state"><strong>State</strong></label>
+                <select class="form-control" id="state" name="state">
+                  <option value="Pick a State">Pick a State</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DC">District of Columbia</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="IA">Iowa</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MD">Maryland</option>
+                  <option value="ME">Maine</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MT">Montana</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NY">New York</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="PR">Puerto Rico</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VA">Virginia</option>
+                  <option value="VT">Vermont</option>
+                  <option value="WA">Washington</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2 text-left">
+                <label for="zipCode"> <strong>Code Postal</strong></label>
+                <input type="number" class="form-control" id="zipCode" />
+              </div>
+            </div>
+
+            <div class=" form-row d-flex justify-content-between">
+              <div class="form-group col-md-6">
+                <div class="text-left">
+                  <h5>We Accept:</h5>
+                </div>
+                <div
+                  id="radiobutton"
+                  class=" col-12 col-sm-9 col-lg-7 bg-secondary mt-4"
+                >
+                  <div class="mt-1">
+                    <div class="form-check form-check-inline mt-2">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio1"
+                        value="option1"
+                      />
+                      <label class="form-check-label" for="inlineRadio1"
+                        ><i class="fa fa-cc-visa" aria-hidden="true"></i
+                      ></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio2"
+                        value="option2"
+                      />
+                      <label class="form-check-label" for="inlineRadio2"
+                        ><i class="fa fa-cc-discover" aria-hidden="true"></i
+                      ></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio3"
+                        value="option3"
+                      />
+                      <label class="form-check-label" for="inlineRadio3"
+                        ><i class="fa fa-cc-amex" aria-hidden="true"></i>
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline mr-0">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio3"
+                        value="option4"
+                      />
+                      <label class="form-check-label" for="inlineRadio4">
+                        <i class="fa fa-cc-visa" aria-hidden="true"></i
+                      ></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col-md-6 text-left ">
+                <label for="exampleFormControlTextarea1"
+                  ><strong> Message </strong></label
+                >
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer text-muted d-flex justify-content-end">
+          <a href="#" class="btn btn-secondary mr-1">Cancel</a>
+          <a id="sentButton" href="#" class="btn btn-primary">Sent</a>
+        </div>
       </div>
     </div>
   </body>

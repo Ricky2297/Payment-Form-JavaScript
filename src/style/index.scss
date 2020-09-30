@@ -1,5 +1,22 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+body {
+  background: black;
+}
+#radiobutton {
+  min-height: 40px;
+  width: 250px;
+  border-radius: 5px;
+}
+#caja {
+  height: 70px;
+  border-radius: 5px;
+  background: rgb(243, 204, 204);
+  border: solid 2px rgb(240, 187, 187);
+}
+#textcolor {
+  color: rgb(114, 8, 8);
+}
 /* 
     body{
         background: #BDBDBD;
